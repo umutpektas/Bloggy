@@ -30,10 +30,13 @@
 <div class="half" id="blog-div" style="display: flex;">
 
     <div class="split left">
-            
-        <input type="text" name="title" placeholder="Blog Başlığı..." class="blog-header">
-        <textarea name="body" id="text-area" cols="30" rows="40" placeholder="Blog İçeriği..."></textarea>                        
-        <a href="index.html"><input type="submit" value="Yayınla" class="blog-button"></a>
+        
+            <form action="blog.php">
+                <input type="text" name="title" placeholder="Blog Başlığı..." class="blog-header">
+                <textarea name="body" id="text-area" cols="30" rows="40" placeholder="Blog İçeriği..."></textarea>                        
+                <a href="index.html"><input type="submit" value="Yayınla" class="blog-button"></a>
+            </form>
+        
         
     </div>
 
@@ -111,6 +114,6 @@
         <li><a href="#">Copyright</a></li>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
