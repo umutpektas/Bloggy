@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/bd3c8c808a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="navbar">
+    
+    <li class = "navbar-li">BLOGGY</li>
+
+    
+     
+    <ul class="navbar-ul">
+        
+    
+        <li><a href="new-blog.html"><button class="button-blog">Yeni Blog <i class="fa-solid fa-plus"></i></button></a></li>       
+        <li><button class="button-blog" id="sign-up"><i class="fa-solid fa-user-plus"></i> Kayıt ol</button></li>
+        <li class="login-button" id="sign-in"><button class="button-blog"><i class="fa-solid fa-arrow-right-to-bracket"></i> Giriş yap</button></li> 
+ 
+    </ul>
+
+   
+</div>
+
+
+<div class="half" id="blog-div" style="display: flex;">
+
+    <div class="split left">
+            
+        <input type="text" name="title" placeholder="Blog Başlığı..." class="blog-header">
+        <textarea name="body" id="text-area" cols="30" rows="40" placeholder="Blog İçeriği..."></textarea>                        
+        <a href="index.html"><input type="submit" value="Yayınla" class="blog-button"></a>
+        
+    </div>
+
+    <div class="split right">
+    
+
+        <img src="file" alt="" class="img-blog" id="image_display">
+        <input type="file" id="file-selector" multiple class="img-btn" accept=".jpg, .jpeg, .png">
+
+        <script>
+            var fileSelector = document.getElementById('file-selector');
+            fileSelector.addEventListener('change', function(e) {
+                var file = e.target.files[0];
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    var dataUrl = e.target.result;
+                    var image = document.getElementById('image_display');
+                    image.src = dataUrl;
+                };
+                reader.readAsDataURL(file);
+            });
+        </script>
+        
+        
+    </div>
+
+</div>
+
+
+
+
+<div class="sign-in-div" id="sign-in-div" style="display: none;">
+        
+        <div class="sign-in-content">
+            
+            <h2 class="login">GİRİŞ YAP</h2>
+            <form action="php/sign-in.php" method="post">
+                <input type="text" name="username" placeholder="Kullanıcı Adı.." class="input" style="max-width: 65%;"><i class="fa-regular fa-user" style="color: white;"></i>
+                <br>
+                <input type="password" name="password" placeholder="Şifre.." class="input" style="max-width: 65%;"><i class="fa-solid fa-key" style="color: white;"></i>
+                <br>
+                <button type="submit" name="submit" class="submit-btn">Giriş Yap</button>
+            </form>
+            
+        </div>
+
+    </div>
+
+    <div class="sign-in-div" id="sign-up-div" style="display: none;">
+        
+        <div class="sign-in-content">
+            
+            <h2 class="login">KAYIT OL</h2>
+            <form action="php/sign-up.php" method="post">
+                <input type="email" name="email" placeholder="Email..." class="input" style="max-width: 65%;"> <i class="fa-regular fa-envelope" style="color: white;"></i>
+                <input type="text" name="username" placeholder="Kullanıcı Adı..." class="input" style="max-width: 65%;"><i class="fa-regular fa-user" style="color: white;"></i>
+                <br>
+                <input type="password" name="password" placeholder="Şifre..." class="input" style="max-width: 65%;"><i class="fa-solid fa-key" style="color: white;"></i>
+                <br>
+                <button type="submit" name="submit" class="submit-btn">Kayıt Ol</button>
+            </form>
+            
+        </div>
+
+    </div>
+
+
+
+
+    <footer>
+        <li><a href="#"class="right">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Copyright</a></li>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
