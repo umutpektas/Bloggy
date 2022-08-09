@@ -7,7 +7,7 @@ const sign_up_div = document.getElementById('sign-up-div');
 
 sign_in_btn.addEventListener('click', function handleClick(){
     if(div.style.display === 'block'){
-        div.style.display = 'none';
+         div.style.display = 'none';
         sign_up_div.style.display = 'none';
         sign_in_div.style.display = 'block'; 
     }
