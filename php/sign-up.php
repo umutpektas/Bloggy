@@ -9,7 +9,7 @@
         $query = "INSERT INTO users (email,username, password) VALUES ('$email','$username', '$password')";
         $result = mysqli_query($conn, $query);
         if($result){
-            echo "<script>alert('Kayıt başarılı!')</script>";
+             echo "<script>alert('Kayıt başarılı!')</script>";
         }else{
             echo "<script>alert('Kayıt başarısız!')</script>";
         }

@@ -9,7 +9,7 @@ $conn = mysqli_connect("localhost", "root", "", "php_project");
         $result = mysqli_query($conn, $query);
         if(mysqli_num_rows($result) > 0){
             $_SESSION['username'] = $username;
-            header("Location: index.php");
+             header("Location: index.php");
         }else{
             echo "<script>alert('Kullanıcı adı veya şifre hatalı!')</script>";
         }
