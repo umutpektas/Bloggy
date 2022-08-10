@@ -231,10 +231,12 @@ ul {
         color: white;
         float:center;
         font-size: 2rem;
-  }
+  } 
+
 
   footer{
     padding-right: 25%;
+    bottom: 0;
   }
 
   footer a{
