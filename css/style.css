@@ -302,8 +302,7 @@ ul {
  }
 
  .blog-button{
-    display: flex;
-    margin-left: 50rem;
+    margin-left: 39rem;
     background-color: green;
     color: var(--clr-neutral-100);
     border-style: none;
